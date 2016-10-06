@@ -1,0 +1,20 @@
+{
+  "name": "authentication",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ted Hagos <tedhagos@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tedhagos/nodelessons",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
