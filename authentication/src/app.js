@@ -13,8 +13,6 @@ const mongoose = require('mongoose');
 
 const port = process.env.PORT || 3000;
 
-const app = express();
-
 
 // CREATE OUR OWN MIDDLEWARE -------------------------------------------------
 function authenticate(req,res, next){
@@ -37,14 +35,32 @@ function authenticate(req,res, next){
   next();
 }
 
-// USE OUR authenticate() middleware
+// MONGOOSE and MODEL SETUP ------------------------------------------------------------
+//
+const Schema = mongoose.Schema;
+const userSchema = new Schema({
+  username: {type: String, required: true},
+  password: {type: String, required:true}
+});
 
-app.use(authenticate);
+var User = mongoose.model('User', userSchema);
+
+mongoose.connect('mongodb://localhost/testAuth');
+
+
+// EXPRESS SETUP -------------------------------------------------------------- 
+
+const app = express();
+app.use(authenticate); // Use our authenticate middleware
 
 
 // ROUTES ---------------------------------------------------------------------
 
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
+
+  // Here is the place where we check the username and password on the
+  // database
+  
   res.send({
     stat: "ok",
     username : req.user.username,
