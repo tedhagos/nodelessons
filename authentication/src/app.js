@@ -2,12 +2,14 @@
 // DONE: implement the user creation
 // TODO: use an encryption  mechanism e.g. bcryptjs
 // TODO: research other ways to encrypt data in db
-// TODO: Use MongoDB
+// DONE: Use MongoDB
 // TODO: work on the snippets github, specifically winston
 // TODO: Complete the User Registration code
 // TODO: Refactor the Express Setup, and separate the routes
 // TODO: Investigate further the module exports
 // TODO: Learn how to consume JSON in POST, test in PostMan
+// TODO: Unit test the routes using supertest 
+// TODO: Example codes on using the native crypto library
 //
 // MODULES --------------------------------------------------------------------
 // 
