@@ -1,5 +1,5 @@
 
-// TODO: implement the user creation
+// DONE: implement the user creation
 // TODO: use an encryption  mechanism e.g. bcryptjs
 // TODO: research other ways to encrypt data in db
 // TODO: Use MongoDB
